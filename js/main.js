@@ -208,14 +208,56 @@ document.addEventListener("DOMContentLoaded", () => {
       }, 300);
     });
   }
+
+
+  const backButtonPrice = document.querySelector(".back-button.price");
   
+  if (backButtonPrice) {
+    backButtonPrice.addEventListener("click", () => {
+      containerFiltersMobile.style.transform = "translateX(0)";
+      setTimeout(() => {
+        hiddenListsFilters.forEach((ul) => {
+          ul.classList.add("hidden");
+        });
+      }, 300);
+    });
+  }
+
+  const backButtonRoom = document.querySelector(".back-button.room");
+  
+  if (backButtonRoom) {
+    backButtonRoom.addEventListener("click", () => {
+      containerFiltersMobile.style.transform = "translateX(0)";
+      setTimeout(() => {
+        hiddenListsFilters.forEach((ul) => {
+          ul.classList.add("hidden");
+        });
+      }, 300);
+    });
+  }
+
+
+  const backButtonBrands = document.querySelector(".back-button.brands");
+  
+  if (backButtonBrands) {
+    backButtonBrands.addEventListener("click", () => {
+      containerFiltersMobile.style.transform = "translateX(0)";
+      setTimeout(() => {
+        hiddenListsFilters.forEach((ul) => {
+          ul.classList.add("hidden");
+        });
+      }, 300);
+    });
+  }
   // Обработчик клика для переходов в подменю (для containerFiltersMobile)
  // Обработчик клика для переходов в подменю (для containerFiltersMobile)
 // Обработчик клика для containerFiltersMobile
 containerFiltersMobile.addEventListener("click", (event) => {
   const li = event.target.closest("li"); // Находим ближайший <li>
   
-  if (li && li.dataset.id) {
+  
+
+  if (li && !li.closest(".filters-mobile-sub-main") && li.dataset.id) {
     const id = li.dataset.id; // Получаем data-id кликаемого элемента
 
     console.log(`Кликнули по data-id: ${id}`); // Для отладки
@@ -228,6 +270,7 @@ containerFiltersMobile.addEventListener("click", (event) => {
       } else {
         ul.classList.add("hidden"); // Скрываем остальные списки
       }
+
     });
 
     // Перемещаем контейнер
@@ -241,7 +284,7 @@ containerFiltersMobile.addEventListener("click", (event) => {
 containerFiltersMobileSub.addEventListener("click", (event) => {
   // Находим ближайший <li>, по которому был клик
   const li = event.target.closest("li");
-
+ 
   if (li && li.dataset.id) {
     const id = li.dataset.id;
 
@@ -258,6 +301,19 @@ containerFiltersMobileSub.addEventListener("click", (event) => {
   }
 });
 
-  
+ // Находим все элементы <li> с классом "filters-item-mobile"
+const filterItems = document.querySelectorAll(".filters-item-mobile");
+
+filterItems.forEach((item) => {
+  item.addEventListener("click", (event) => {
+    const checkbox = item.querySelector(".custom-checkbox");
+
+    if (event.target !== checkbox) {
+      // Инвертируем состояние чекбокса
+      checkbox.checked = !checkbox.checked;
+    }
+  });
+});
+ 
 
 });

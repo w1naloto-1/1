@@ -476,6 +476,18 @@ input[type="number"] {
     transition: transform 0.3s ease, background 0.3s ease;
   }
   
+  /* .filters-mobile-button {
+    position: fixed;
+    z-index: 1000;
+  } */
+
+ 
+
+  .filters-item-mobile {
+
+    align-items: center;
+  }
+
   .toggle-button-mobile.active {
     background: #291883;
     justify-content: flex-end;
@@ -503,4 +515,49 @@ input[type="number"] {
     flex-shrink: 0;
   }
 
+  .price-inputs {
+    padding: 25px 15px;
+    gap: 25px;
+    justify-content: center;
+  }
+
+  #min-price {
+    width: 100%;
+  }
+
+  #max-price {
+    width: 100%;
+  }
+
+
+  .price-inputs input {
+    max-width: 100%;
+  }
+
+  .filters-item-mobile.brands {
+    border: 0;
+    padding: 0;
+   
+  }
+
+  .filters-item-mobile.brands:checked {
+    color: #291883;
+  }
+  .brands-mobile {
+    display: flex;
+    flex-direction: column;
+  gap: 20px;
+}
+
+.room-mobile {
+    display: flex;
+    flex-direction: column;
+  gap: 20px;
+}
+
+.filters-item-mobile.room {
+    border: 0;
+    padding: 0;
+   
+  }
 }
