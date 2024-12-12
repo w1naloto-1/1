@@ -179,7 +179,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const hiddenListsFilters = document.querySelectorAll(".sub-filters-container.hidden");
 
   const containerFiltersMobileSub = document.querySelector(".sub-filters-container");
-  const hiddenListsFilterss = document.querySelectorAll(".sub-sub-filters-container");
+  const hiddenListsFiltersSub = document.querySelectorAll(".sub-sub-filters-container");
   
   // Первая кнопка "Назад" для контейнера containerFiltersMobile
   const backButtonMain = document.querySelector(".back-button.main");
@@ -245,14 +245,12 @@ containerFiltersMobileSub.addEventListener("click", (event) => {
   if (li && li.dataset.id) {
     const id = li.dataset.id;
 
-    hiddenListsFilterss.forEach((ul) => {
+    hiddenListsFiltersSub.forEach((ul) => {
       if (ul.dataset.id === id) {
         ul.classList.remove("hidden");
       } else {
         ul.classList.add("hidden");
       }
-     
-
     });
 
     // Перемещаем контейнер

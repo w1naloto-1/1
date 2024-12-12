@@ -359,10 +359,7 @@ input[type="number"] {
     font-weight: 700;
   }
 
-  .hidden {
-    display: none;
-  }
-
+ 
   .filters-item-mobile span {
     padding-right: 14px;
   }
@@ -494,4 +491,16 @@ input[type="number"] {
     padding: 0; /* Убирает отступы у списка */
     margin: 0; /* Убирает внешние отступы */
   }
+
+  .hidden {
+    display: none;
+  }
+
+  .price-slider-container {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100vw;
+    flex-shrink: 0;
+  }
+
 }
