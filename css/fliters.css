@@ -1,0 +1,497 @@
+.custom-accordion {
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background-color: #f4f4f4;
+  font-size: 14px;
+  font-weight: 300;
+  padding: 20px 20px;
+  line-height: 17.57px;
+  color: #333333;
+}
+
+.container-filters-mobile {
+  display: none;
+}
+
+.custom-header {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.custom-header:hover {
+  opacity: 0.8;
+}
+
+.custom-accordion-button {
+  background-color: transparent;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.custom-accordion-button svg {
+  transition: transform 0.3s ease-out;
+}
+
+.custom-accordion-button.active svg {
+  transform: rotate(180deg);
+}
+
+.custom-body {
+  display: block;
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 10px;
+  transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+}
+
+.custom-body.show {
+  max-height: 500px;
+  padding: 6px 20px;
+}
+
+.custom-header span {
+  margin: 0;
+  font-weight: 300;
+}
+
+.custom-list-item {
+  padding: 2px 0;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.custom-list-item:hover {
+  color: #291883;
+  opacity: 0.8;
+}
+
+.custom-list-item.active {
+  color: #291883;
+  font-weight: 500;
+}
+
+.custom-header.bottom {
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #cacaca;
+  padding-top: 20px;
+}
+
+.custom-header.bottom.toggle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+
+  cursor: default !important;
+}
+
+.custom-header.bottom.toggle:hover {
+  opacity: 1;
+}
+
+.toggle-button.new {
+  width: 36px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2px;
+}
+
+.toggle-button.sale {
+  width: 36px;
+  height: 20px;
+  background: #ccc;
+  border-radius: 50px;
+  position: relative;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 2px;
+}
+
+.toggle-button .toggle-icon {
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.toggle-button.active {
+  background: #291883;
+  justify-content: flex-end;
+}
+
+.toggle-button.active .toggle-icon {
+  background: #fff;
+}
+
+.custom-body.bottom {
+  padding: 0;
+}
+
+.custom-accordion.bottom {
+  gap: 20px;
+  flex-direction: column;
+  display: flex;
+}
+
+.custom-list-item.show-more {
+  color: #333333;
+  font-weight: normal;
+  cursor: pointer;
+  font-weight: 400;
+  text-decoration: underline;
+}
+
+.custom-list-item.hidden {
+  display: none;
+}
+
+.custom-body.bottom {
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  max-height: 0;
+  display: none;
+}
+
+.custom-body.bottom.show {
+  max-height: 500px;
+  padding-bottom: 10px;
+}
+
+.custom-accordion-button.bottom svg {
+  transition: transform 0.3s ease-out;
+}
+
+.custom-accordion-button.bottom.active svg {
+  transform: rotate(180deg);
+}
+
+.custom-checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 1px solid #333;
+  margin-right: 14px;
+  position: relative;
+  cursor: pointer;
+  background-color: #fff;
+}
+
+.custom-checkbox:checked {
+  background-color: #291883;
+}
+
+.custom-list-item {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.custom-list-item.bottom.show-more {
+  padding-top: 5px;
+
+}
+
+.custom-list-item.bottom label {
+  cursor: pointer;
+}
+
+.custom-list-item.bottom.active {
+  display: flex;
+  align-items: center;
+}
+
+#slider {
+  margin: 20px auto;
+
+  height: 8px;
+  background: #e0e0e0;
+  border-radius: 5px;
+  position: relative;
+}
+
+#slider .noUi-handle {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #333;
+  background-color: white;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#slider .noUi-connect {
+  background-color: black;
+  height: 100%;
+  border-radius: 5px;
+  width: 100%;
+}
+
+#slider {
+  margin: 20px auto;
+  height: 1.5px;
+  background: #e0e0e0;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+
+#slider .noUi-handle {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #333;
+  background-color: white;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#slider .noUi-connect {
+  background-color: black;
+  height: 1.5px;
+  margin-right: -15px;
+  border-radius: 5px;
+}
+
+.noUi-handle:after {
+  display: none;
+}
+
+.noUi-handle:before {
+  display: none;
+}
+
+.price-slider-container {
+}
+
+.price-inputs {
+  display: flex;
+  justify-content: space-between;
+}
+
+.price-inputs input {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+  max-width: 100px;
+  width: 100%;
+}
+
+#min-price {
+  padding: 8px 0;
+}
+
+#max-price {
+  padding: 8px 0;
+}
+
+/* Для браузеров на базе WebKit (Chrome, Edge, Safari) */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+@media (max-width: 1024px) {
+  .container-filters {
+    display: none;
+  }
+
+  .container-filters-mobile {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .filters-item-mobile {
+    position: relative;
+  
+    height: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+  }
+
+  .show-more-mobile {
+    font-size: 17px;
+    font-weight: 700;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .filters-item-mobile span {
+    padding-right: 14px;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .filters-mobile {
+    background-color: #fff;
+    display: flex;
+    transition: 0.3s ease;
+  }
+
+  .sub-filters-container {
+    display: flex;
+    transition: 0.3s ease;
+  }
+
+  .filters-mobile-button {
+    all: unset; /* Сбрасывает все стили кнопки */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #F4F4F4;
+
+  }
+
+  .filters-mobile-button span {
+    flex: 2; /* Текст занимает оставшееся место */
+ /* Центрирование текста */
+    font-size:18px ;
+    font-weight: 500;
+  }
+
+  .filters-mobile-main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100vw;
+    flex-shrink: 0;
+  }
+
+  .filters-mobile-sub-main {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100vw;
+    flex-shrink: 0;
+  }
+
+  .mobile-button {
+    all: unset; /* Сбрасывает все стили кнопки */
+    background: none; /* Убирает фон */
+    border: none; /* Убирает границу */
+    padding: 12px 20px;
+    width: 100%;
+    margin: 0; /* Убирает внешние отступы */
+    font: inherit; /* Наследует шрифт от родителя */
+    text-align: inherit; /* Наследует выравнивание текста */
+    cursor: pointer;
+  }
+
+  .filters-mobile ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none; /* Убирает маркеры у списка внутри .sub-menu */
+    padding:20px 0; /* Убирает отступы у списка */
+    margin: 0; /* Убирает внешние отступы */
+  }
+
+  li {
+    padding: 20px 0;
+    margin: 0 12px;
+    border-top: 1px solid #cacaca;
+  }
+
+  .sub-sub-filters-container {
+    background-color: #fff;
+    display: flex;
+        flex-direction: column;
+        flex: 0 0 100vw;
+        flex-shrink: 0;
+  }
+
+  .sub-filters-container {
+    background-color: #fff;
+    display: flex;
+      
+        flex: 0 0 100vw;
+        flex-shrink: 0;
+  }
+
+  .toggle-button-mobile{
+    width: 36px;
+    height: 20px;
+    background: #ccc;
+    border-radius: 50px;
+    position: relative;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 2px;
+  }
+
+  .toggle-button-mobile .toggle-icon {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+  }
+  
+  .toggle-button-mobile.active {
+    background: #291883;
+    justify-content: flex-end;
+  }
+  
+  .toggle-button-mobile.active .toggle-icon {
+    background: #fff;
+  }
+  
+
+  .sub-menu ul {
+    list-style-type: none; /* Убирает маркеры у списка внутри .sub-menu */
+    padding: 0; /* Убирает отступы у списка */
+    margin: 0; /* Убирает внешние отступы */
+  }
+}
