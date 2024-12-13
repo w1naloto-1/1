@@ -221,7 +221,6 @@
 
 .custom-list-item.bottom.show-more {
   padding-top: 5px;
-
 }
 
 .custom-list-item.bottom label {
@@ -233,13 +232,17 @@
   align-items: center;
 }
 
+.price-slider-container {
+  
+}
+
 #slider {
-  margin: 20px auto;
+  
 
   height: 8px;
   background: #e0e0e0;
   border-radius: 5px;
-  position: relative;
+
 }
 
 #slider .noUi-handle {
@@ -257,16 +260,17 @@
   background-color: black;
   height: 100%;
   border-radius: 5px;
-  width: 100%;
+
 }
 
 #slider {
   margin: 20px auto;
-  height: 1.5px;
+  height: 3px;
   background: #e0e0e0;
-  width: 100%;
+
   border-radius: 5px;
   position: relative;
+  padding: 0 1px;
 }
 
 #slider .noUi-handle {
@@ -277,13 +281,14 @@
   border-radius: 50%;
   outline: none;
   cursor: pointer;
+  position: absolute;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 #slider .noUi-connect {
   background-color: black;
-  height: 1.5px;
-  margin-right: -15px;
+  height: 3px;
+
   border-radius: 5px;
 }
 
@@ -295,7 +300,12 @@
   display: none;
 }
 
-.price-slider-container {
+.noUi-horizontal .noUi-handle {
+  width: 16px;
+  height: 16px;
+  right: -2px;
+  top: -8px;
+  
 }
 
 .price-inputs {
@@ -332,6 +342,8 @@ input[type="number"] {
   -moz-appearance: textfield;
 }
 
+
+
 @media (max-width: 1024px) {
   .container-filters {
     display: none;
@@ -346,7 +358,7 @@ input[type="number"] {
 
   .filters-item-mobile {
     position: relative;
-  
+
     height: 100%;
     background-color: #fff;
     display: flex;
@@ -359,7 +371,6 @@ input[type="number"] {
     font-weight: 700;
   }
 
- 
   .filters-item-mobile span {
     padding-right: 14px;
   }
@@ -386,14 +397,13 @@ input[type="number"] {
     justify-content: space-between;
     text-align: center;
     padding: 12px 20px;
-    background-color: #F4F4F4;
-
+    background-color: #f4f4f4;
   }
 
   .filters-mobile-button span {
     flex: 2; /* Текст занимает оставшееся место */
- /* Центрирование текста */
-    font-size:18px ;
+    /* Центрирование текста */
+    font-size: 18px;
     font-weight: 500;
   }
 
@@ -410,7 +420,24 @@ input[type="number"] {
     flex: 0 0 100vw;
     flex-shrink: 0;
   }
-
+  .price-mobile {
+    padding: 20px 22.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+ 
+  .inputs-mobile {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+  }
+  .price-container-mobile {
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 100vw;
+    flex-shrink: 0;
+  }
   .mobile-button {
     all: unset; /* Сбрасывает все стили кнопки */
     background: none; /* Убирает фон */
@@ -427,7 +454,7 @@ input[type="number"] {
     display: flex;
     flex-direction: column;
     list-style-type: none; /* Убирает маркеры у списка внутри .sub-menu */
-    padding:20px 0; /* Убирает отступы у списка */
+    padding: 20px 0; /* Убирает отступы у списка */
     margin: 0; /* Убирает внешние отступы */
   }
 
@@ -440,20 +467,20 @@ input[type="number"] {
   .sub-sub-filters-container {
     background-color: #fff;
     display: flex;
-        flex-direction: column;
-        flex: 0 0 100vw;
-        flex-shrink: 0;
+    flex-direction: column;
+    flex: 0 0 100vw;
+    flex-shrink: 0;
   }
 
   .sub-filters-container {
     background-color: #fff;
     display: flex;
-      
-        flex: 0 0 100vw;
-        flex-shrink: 0;
+
+    flex: 0 0 100vw;
+    flex-shrink: 0;
   }
 
-  .toggle-button-mobile{
+  .toggle-button-mobile {
     width: 36px;
     height: 20px;
     background: #ccc;
@@ -475,16 +502,32 @@ input[type="number"] {
     position: relative;
     transition: transform 0.3s ease, background 0.3s ease;
   }
-  
-  /* .filters-mobile-button {
-    position: fixed;
-    z-index: 1000;
-  } */
 
- 
+  .filters-item-mobile.room {
+    justify-content: flex-start;
+  }
+
+  .filters-item-mobile.brands {
+    justify-content: flex-start;
+  }
+
+  .filters-item-mobile.style {
+    justify-content: flex-start;
+  }
+
+  .filters-item-mobile.color {
+    justify-content: flex-start;
+  }
+
+  .filters-item-mobile.material {
+    justify-content: flex-start;
+  }
+
+  .filters-item-mobile.country {
+    justify-content: flex-start;
+  }
 
   .filters-item-mobile {
-
     align-items: center;
   }
 
@@ -492,52 +535,27 @@ input[type="number"] {
     background: #291883;
     justify-content: flex-end;
   }
-  
+
   .toggle-button-mobile.active .toggle-icon {
     background: #fff;
   }
-  
 
   .sub-menu ul {
-    list-style-type: none; /* Убирает маркеры у списка внутри .sub-menu */
-    padding: 0; /* Убирает отступы у списка */
-    margin: 0; /* Убирает внешние отступы */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
   }
 
   .hidden {
     display: none;
   }
 
-  .price-slider-container {
-    display: flex;
-    flex-direction: column;
-    flex: 0 0 100vw;
-    flex-shrink: 0;
-  }
+  
 
-  .price-inputs {
-    padding: 25px 15px;
-    gap: 25px;
-    justify-content: center;
-  }
-
-  #min-price {
-    width: 100%;
-  }
-
-  #max-price {
-    width: 100%;
-  }
-
-
-  .price-inputs input {
-    max-width: 100%;
-  }
-
+  
   .filters-item-mobile.brands {
     border: 0;
     padding: 0;
-   
   }
 
   .filters-item-mobile.brands:checked {
@@ -546,18 +564,178 @@ input[type="number"] {
   .brands-mobile {
     display: flex;
     flex-direction: column;
-  gap: 20px;
-}
+    gap: 20px;
+  }
 
-.room-mobile {
+  .room-mobile {
     display: flex;
     flex-direction: column;
-  gap: 20px;
-}
+    gap: 20px;
+  }
 
-.filters-item-mobile.room {
+  .filters-item-mobile.room {
     border: 0;
     padding: 0;
-   
   }
+
+  .style-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-item-mobile.style {
+    border: 0;
+    padding: 0;
+  }
+
+  .color-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-item-mobile.color {
+    border: 0;
+    padding: 0;
+  }
+
+  .material-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-item-mobile.material {
+    border: 0;
+    padding: 0;
+  }
+
+  .country-mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .filters-item-mobile.country {
+    border: 0;
+    padding: 0;
+  }
+
+
+  
+
+  .filters-item-mobile.room {
+    width: 100%;
+  }
+  
+
+  .filters-mobile-button span {
+    display: flex;
+    align-items: center;
+
+  }
+
+
+  .count-circle {
+    background-color: #291883;
+    color: white;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;  /* Центрируем по горизонтали */
+    align-items: center;  /* Центрируем по вертикали */
+    margin-left: 18px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+
+
+  .name {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Центрируем содержимое по вертикали */
+  }
+
+
+  .count-circle {
+    padding:3px  8px;
+  }
+
+  
+
+#price-slider {
+  width: 100%;
+  margin: 10px 0;
+  height: 3px; 
+  background-color: #cacaca;
+  font-size: 16px;
+}
+
+
+.noUi-connect {
+  background: #000000; /* Зеленый цвет для диапазона */
+}
+
+
+.noUi-handle {
+  background: white; /* Белый цвет для ручек */
+  border: 1px solid black; /* Черная обводка */
+  width: 5px; /* Ширина ручек */
+  height: 5px; /* Высота ручек */
+  border-radius: 50%; /* Округлая форма ручек */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Тень для ручек */
+  position: absolute;
+  top: 50%; /* Центрируем по вертикали */
+  margin-bottom: -20px;
+}
+
+
+
+.noUi-horizontal .noUi-handle {
+  width: 16px;
+  height: 16px;
+  right: -15px;
+  top: -8px;
+}
+
+#min-price-mobile {
+  border: 1px solid #cacaca;
+  font-size: 16px;
+  border-radius: 4px;
+ width: 100%;
+}
+
+
+#max-price-mobile {
+  border: 1px solid #cacaca;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.accept-btns-mobile {
+  padding: 21px 48px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+
+  all: unset;
+  border: 1px solid #291883;
+  border-radius: 4px;
+}
+
+.btn.accept {
+  background-color: #291883;
+  color: white;
+}
+
+.btn span {
+  display: inline-block;
+  padding: 10px 20px;
+
+}
 }
